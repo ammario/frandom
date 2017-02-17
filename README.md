@@ -25,6 +25,8 @@ user	0m2.192s
 sys	0m2.332s
 ```
 
+__That's 10.3 mb/s to 370 mb/s__
+
 ## How?
 
 `frandom` leverages your CPU's lovely AES optimization to quickly generate ciphertext which has the characteristic of being cryptographically random.
