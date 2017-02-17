@@ -42,3 +42,10 @@ else
     sudo cp $GOPATH/bin/frandom /usr/bin/frandom
 fi  
 ```
+
+## As a package
+[Godoc](https://godoc.org/github.com/ammario/frandom)
+
+`frandom` appears to outperform `crypto/rand`
+
+I'm still investigating trade-offs.
