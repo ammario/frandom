@@ -12,18 +12,12 @@ const BufferSize = 1024
 
 //Rand generates randomness
 type Rand struct {
-	buf []byte
+	buf    []byte
+	stream cipher.Stream
 }
 
 //New returns a new random generator
 func New() *Rand {
-	return &Rand{
-		buf: make([]byte, BufferSize),
-	}
-}
-
-//Read reads into b
-func (r *Rand) Read(b []byte) (n int, err error) {
 	key := make([]byte, 32)
 	if _, err := rand.Read(key); err != nil {
 		panic(err)
@@ -39,9 +33,17 @@ func (r *Rand) Read(b []byte) (n int, err error) {
 	//panic(block.BlockSize())
 	stream := cipher.NewCTR(block, iv)
 
+	return &Rand{
+		buf:    make([]byte, BufferSize),
+		stream: stream,
+	}
+}
+
+//Read reads into b
+func (r *Rand) Read(b []byte) (n int, err error) {
 	for n < len(b) {
 		toWrite := len(r.buf) % len(b)
-		stream.XORKeyStream(b[n:n+toWrite], r.buf[:toWrite])
+		r.stream.XORKeyStream(b[n:n+toWrite], r.buf[:toWrite])
 		n += toWrite
 	}
 
@@ -50,23 +52,8 @@ func (r *Rand) Read(b []byte) (n int, err error) {
 
 //WriteTo writes to a writer
 func (r *Rand) WriteTo(wr io.Writer) (written int64, err error) {
-	key := make([]byte, 32)
-	if _, err := rand.Read(key); err != nil {
-		panic(err)
-	}
-	iv := make([]byte, 16)
-	if _, err := rand.Read(iv); err != nil {
-		panic(err)
-	}
-	block, err := aes.NewCipher(key)
-	if err != nil {
-		panic(err)
-	}
-	//panic(block.BlockSize())
-	stream := cipher.NewCTR(block, iv)
-
 	for {
-		stream.XORKeyStream(r.buf[:], r.buf[:])
+		r.stream.XORKeyStream(r.buf[:], r.buf[:])
 		n, err := wr.Write(r.buf[:])
 		written += int64(n)
 		if err != nil {
