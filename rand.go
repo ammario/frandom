@@ -67,3 +67,11 @@ func (r *Rand) WriteTo(wr io.Writer) (written int64, err error) {
 		}
 	}
 }
+
+// //UnsafeWriteTo writes to a wr without checking errors.
+// func (r *Rand) UnsafeWriteTo(wr io.Writer) (written int64, err error) {
+// 	for {
+// 		r.stream.XORKeyStream(r.buf, r.buf)
+// 		wr.Write(r.buf)
+// 	}
+// }
