@@ -16,7 +16,7 @@ type Rand struct {
 	stream cipher.Stream
 }
 
-//New returns a new random generator
+//New returns a new randomness generator
 func New() *Rand {
 	key := make([]byte, 32)
 	if _, err := rand.Read(key); err != nil {
@@ -39,7 +39,8 @@ func New() *Rand {
 	}
 }
 
-//Read reads into b
+//Read reads into b.
+//It never returns an error.
 func (r *Rand) Read(b []byte) (n int, err error) {
 	for n < len(b) {
 		toWrite := len(r.buf) % len(b)
