@@ -6,10 +6,11 @@ Fast random
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [frandom](#frandom)
-  - [Algorithm](#algorithm)
-  - [Install](#install)
-  - [As a package](#as-a-package)
+- [Algorithm](#algorithm)
+- [Install](#install)
+- [As a package](#as-a-package)
+- [Entropy Check](#entropy-check)
+- [Disclaimer](#disclaimer)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -59,6 +60,28 @@ fi
 [Godoc](https://godoc.org/github.com/ammario/frandom)
 
 `frandom` appears to outperform `crypto/rand`
+
+## Entropy Check
+
+Here's me running ent on output.
+
+```bash
+ammar @ nebula > /tmp
+$ frandom | head -c 100M > entropy_check
+ammar @ nebula > /tmp
+$ ent entropy_check 
+Entropy = 7.999998 bits per byte.
+
+Optimum compression would reduce the size
+of this 104857600 byte file by 0 percent.
+
+Chi square distribution for 104857600 samples is 264.29, and randomly
+would exceed this value 33.14 percent of the times.
+
+Arithmetic mean value of data bytes is 127.5032 (127.5 = random).
+Monte Carlo value for Pi is 3.141542478 (error 0.00 percent).
+Serial correlation coefficient is -0.000111 (totally uncorrelated = 0.0).
+```
 
 
 ## Disclaimer
