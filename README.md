@@ -2,6 +2,17 @@
 
 Fast random
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [frandom](#frandom)
+  - [Algorithm](#algorithm)
+  - [Install](#install)
+  - [As a package](#as-a-package)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 `/dev/urandom` is *slow*
 
 
@@ -27,9 +38,10 @@ sys	0m2.332s
 
 __That's 10.3 mb/s to 370 mb/s__
 
-## How?
+## Algorithm
 
-Spams AES-CTR which your CPU loves.
+1) Generate iv/key with `crypto/rand`
+2) Spam AES-CTR
 
 ## Install
 
