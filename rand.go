@@ -18,7 +18,7 @@ type Rand struct {
 
 //New returns a new randomness generator
 func New() *Rand {
-	key := make([]byte, 32)
+	key := make([]byte, 16)
 	if _, err := rand.Read(key); err != nil {
 		panic(err)
 	}
