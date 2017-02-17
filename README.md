@@ -41,6 +41,7 @@ __That's 10.3 mb/s to 370 mb/s__
 ## Algorithm
 
 1) Generate iv/key with `crypto/rand`
+
 2) Spam AES-CTR
 
 ## Install
