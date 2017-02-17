@@ -42,20 +42,25 @@ func New() *Rand {
 //Read reads into b.
 //It never returns an error.
 func (r *Rand) Read(b []byte) (n int, err error) {
-	for n < len(b) {
-		toWrite := len(r.buf) % len(b)
-		r.stream.XORKeyStream(b[n:n+toWrite], r.buf[:toWrite])
-		n += toWrite
+	//almost certainly can be optmized
+	passes := len(b) / len(r.buf)
+	for i := 0; i <= passes; i++ {
+		if i == passes {
+			leftover := len(b) % len(r.buf)
+			r.stream.XORKeyStream(b[leftover:], r.buf[:leftover])
+			return
+		}
+		r.stream.XORKeyStream(b[n:], r.buf)
+		n += len(r.buf)
 	}
-
 	return
 }
 
 //WriteTo writes to a writer
 func (r *Rand) WriteTo(wr io.Writer) (written int64, err error) {
 	for {
-		r.stream.XORKeyStream(r.buf[:], r.buf[:])
-		n, err := wr.Write(r.buf[:])
+		r.stream.XORKeyStream(r.buf, r.buf)
+		n, err := wr.Write(r.buf)
 		written += int64(n)
 		if err != nil {
 			return written, err
