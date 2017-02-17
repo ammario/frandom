@@ -30,12 +30,10 @@ func New() *Rand {
 	if err != nil {
 		panic(err)
 	}
-	//panic(block.BlockSize())
-	stream := cipher.NewCTR(block, iv)
 
 	return &Rand{
 		buf:    make([]byte, BufferSize),
-		stream: stream,
+		stream: cipher.NewCTR(block, iv),
 	}
 }
 

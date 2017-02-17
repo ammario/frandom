@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	rng := frandom.New()
-	_, err := rng.WriteTo(os.Stdout)
+	_, err := frandom.New().WriteTo(os.Stdout)
 	panic(err)
 }
