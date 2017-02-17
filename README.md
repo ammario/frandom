@@ -36,5 +36,9 @@ __That's 10.3 mb/s to 370 mb/s__
 ```bash
 go get -u github.com/ammario/frandom/cmd/frandom
 go install github.com/ammario/frandom/cmd/frandom
-sudo cp $GOPATH/bin/frandom /usr/bin/frandom
+if [ -z "$GOPATH" ]; then
+    sudo cp ~/go/bin/frandom /usr/bin/frandom
+else
+    sudo cp $GOPATH/bin/frandom /usr/bin/frandom
+fi  
 ```
