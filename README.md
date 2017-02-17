@@ -60,4 +60,11 @@ fi
 
 `frandom` appears to outperform `crypto/rand`
 
+
+## Disclaimer
+
 I'm still investigating trade-offs.
+
+Entropy tests appear ok but I'm not a crypto-man so you use this with caution.
+
+

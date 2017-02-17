@@ -31,10 +31,15 @@ func New() *Rand {
 		panic(err)
 	}
 
-	return &Rand{
+	rand := &Rand{
 		buf:    make([]byte, BufferSize),
 		stream: cipher.NewCTR(block, iv),
 	}
+	//start buf off nice and random
+	if _, err := rand.Read(rand.buf); err != nil {
+		panic(err)
+	}
+	return rand
 }
 
 //Read reads into b.
