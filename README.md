@@ -65,6 +65,6 @@ fi
 
 I'm still investigating trade-offs.
 
-Entropy tests appear ok but I'm not a crypto-man so you use this with caution.
+Entropy tests appear ok but I'm not a crypto-man so maybe use this with caution.
 
 

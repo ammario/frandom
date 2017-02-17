@@ -36,6 +36,7 @@ func New() *Rand {
 		stream: cipher.NewCTR(block, iv),
 	}
 	//start buf off nice and random
+	//pretty sure this doesn't affect security but oh well.
 	if _, err := rand.Read(rand.buf); err != nil {
 		panic(err)
 	}
