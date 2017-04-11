@@ -43,7 +43,9 @@ __That's 10.3 mb/s to 370 mb/s__
 
 1) Generate iv/key with `crypto/rand`
 
-2) Spam AES-CTR
+2) Spam AES-OFB
+
+3) Reseed after a MB has been generated
 
 ## Install
 
@@ -63,31 +65,11 @@ fi
 
 ## Entropy Check
 
-Here's me running ent on output.
-
-```bash
-ammar @ nebula > /tmp
-$ frandom | head -c 100M > entropy_check
-ammar @ nebula > /tmp
-$ ent entropy_check 
-Entropy = 7.999998 bits per byte.
-
-Optimum compression would reduce the size
-of this 104857600 byte file by 0 percent.
-
-Chi square distribution for 104857600 samples is 264.29, and randomly
-would exceed this value 33.14 percent of the times.
-
-Arithmetic mean value of data bytes is 127.5032 (127.5 = random).
-Monte Carlo value for Pi is 3.141542478 (error 0.00 percent).
-Serial correlation coefficient is -0.000111 (totally uncorrelated = 0.0).
-```
+Run `entropy.sh` to test frandom's entropy. (the dieharder tests will take a while to run)
+See `entropy.txt` for my test results.
 
 
 ## Disclaimer
 
-I'm still investigating trade-offs.
-
 Entropy tests appear ok but I'm not a crypto-man so maybe use this with caution.
-
 

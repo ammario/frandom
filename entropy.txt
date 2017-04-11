@@ -1,0 +1,138 @@
+Checking 150M generated single threaded with ent...
+Entropy = 7.999999 bits per byte.
+
+Optimum compression would reduce the size
+of this 157286400 byte file by 0 percent.
+
+Chi square distribution for 157286400 samples is 246.32, and randomly
+would exceed this value 64.02 percent of the times.
+
+Arithmetic mean value of data bytes is 127.4968 (127.5 = random).
+Monte Carlo value for Pi is 3.141824341 (error 0.01 percent).
+Serial correlation coefficient is 0.000035 (totally uncorrelated = 0.0).
+Checking 150M generated multi threaded with ent...
+Entropy = 7.999999 bits per byte.
+
+Optimum compression would reduce the size
+of this 157286400 byte file by 0 percent.
+
+Chi square distribution for 157286400 samples is 276.45, and randomly
+would exceed this value 17.01 percent of the times.
+
+Arithmetic mean value of data bytes is 127.4953 (127.5 = random).
+Monte Carlo value for Pi is 3.141728210 (error 0.00 percent).
+Serial correlation coefficient is -0.000066 (totally uncorrelated = 0.0).
+Checking single threaded generated with dieharder
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |rands/second|   Seed   |
+stdin_input_raw|  6.03e+07  |2220918217|
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+   diehard_birthdays|   0|       100|     100|0.21687458|  PASSED  
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |rands/second|   Seed   |
+stdin_input_raw|  5.30e+07  |3274354575|
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+         diehard_dna|   0|   2097152|     100|0.20936619|  PASSED  
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |rands/second|   Seed   |
+stdin_input_raw|  5.18e+07  | 523290517|
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+          sts_serial|   1|    100000|     100|0.58161625|  PASSED  
+          sts_serial|   2|    100000|     100|0.84739098|  PASSED  
+          sts_serial|   3|    100000|     100|0.41295902|  PASSED  
+          sts_serial|   3|    100000|     100|0.64478677|  PASSED  
+          sts_serial|   4|    100000|     100|0.78106088|  PASSED  
+          sts_serial|   4|    100000|     100|0.83850609|  PASSED  
+          sts_serial|   5|    100000|     100|0.96317275|  PASSED  
+          sts_serial|   5|    100000|     100|0.91492605|  PASSED  
+          sts_serial|   6|    100000|     100|0.66831818|  PASSED  
+          sts_serial|   6|    100000|     100|0.69531866|  PASSED  
+          sts_serial|   7|    100000|     100|0.00968776|  PASSED  
+          sts_serial|   7|    100000|     100|0.14025843|  PASSED  
+          sts_serial|   8|    100000|     100|0.03083258|  PASSED  
+          sts_serial|   8|    100000|     100|0.92513461|  PASSED  
+          sts_serial|   9|    100000|     100|0.23238656|  PASSED  
+          sts_serial|   9|    100000|     100|0.45683718|  PASSED  
+          sts_serial|  10|    100000|     100|0.47650896|  PASSED  
+          sts_serial|  10|    100000|     100|0.97517415|  PASSED  
+          sts_serial|  11|    100000|     100|0.48422188|  PASSED  
+          sts_serial|  11|    100000|     100|0.81545075|  PASSED  
+          sts_serial|  12|    100000|     100|0.76274879|  PASSED  
+          sts_serial|  12|    100000|     100|0.53230057|  PASSED  
+          sts_serial|  13|    100000|     100|0.62429779|  PASSED  
+          sts_serial|  13|    100000|     100|0.04995949|  PASSED  
+          sts_serial|  14|    100000|     100|0.11668743|  PASSED  
+          sts_serial|  14|    100000|     100|0.98041111|  PASSED  
+          sts_serial|  15|    100000|     100|0.64297120|  PASSED  
+          sts_serial|  15|    100000|     100|0.22120839|  PASSED  
+          sts_serial|  16|    100000|     100|0.73494879|  PASSED  
+          sts_serial|  16|    100000|     100|0.50396253|  PASSED  
+Checking multi threaded generated with dieharder
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |rands/second|   Seed   |
+stdin_input_raw|  4.10e+07  | 418626607|
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+   diehard_birthdays|   0|       100|     100|0.99093586|  PASSED  
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |rands/second|   Seed   |
+stdin_input_raw|  3.83e+07  | 780080709|
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+         diehard_dna|   0|   2097152|     100|0.75419716|  PASSED  
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    |rands/second|   Seed   |
+stdin_input_raw|  3.66e+07  |1390357631|
+#=============================================================================#
+        test_name   |ntup| tsamples |psamples|  p-value |Assessment
+#=============================================================================#
+          sts_serial|   1|    100000|     100|0.86600589|  PASSED  
+          sts_serial|   2|    100000|     100|0.13428652|  PASSED  
+          sts_serial|   3|    100000|     100|0.92981082|  PASSED  
+          sts_serial|   3|    100000|     100|0.39071687|  PASSED  
+          sts_serial|   4|    100000|     100|0.39795485|  PASSED  
+          sts_serial|   4|    100000|     100|0.24631320|  PASSED  
+          sts_serial|   5|    100000|     100|0.88729370|  PASSED  
+          sts_serial|   5|    100000|     100|0.66843291|  PASSED  
+          sts_serial|   6|    100000|     100|0.36115661|  PASSED  
+          sts_serial|   6|    100000|     100|0.25197049|  PASSED  
+          sts_serial|   7|    100000|     100|0.00011667|   WEAK   
+          sts_serial|   7|    100000|     100|0.00612078|  PASSED  
+          sts_serial|   8|    100000|     100|0.00583269|  PASSED  
+          sts_serial|   8|    100000|     100|0.41053554|  PASSED  
+          sts_serial|   9|    100000|     100|0.30424210|  PASSED  
+          sts_serial|   9|    100000|     100|0.76517151|  PASSED  
+          sts_serial|  10|    100000|     100|0.04392658|  PASSED  
+          sts_serial|  10|    100000|     100|0.32288292|  PASSED  
+          sts_serial|  11|    100000|     100|0.83297418|  PASSED  
+          sts_serial|  11|    100000|     100|0.25167352|  PASSED  
+          sts_serial|  12|    100000|     100|0.85815848|  PASSED  
+          sts_serial|  12|    100000|     100|0.97781035|  PASSED  
+          sts_serial|  13|    100000|     100|0.78645127|  PASSED  
+          sts_serial|  13|    100000|     100|0.90107899|  PASSED  
+          sts_serial|  14|    100000|     100|0.35151390|  PASSED  
+          sts_serial|  14|    100000|     100|0.16976625|  PASSED  
+          sts_serial|  15|    100000|     100|0.68989583|  PASSED  
+          sts_serial|  15|    100000|     100|0.55268275|  PASSED  
+          sts_serial|  16|    100000|     100|0.74740887|  PASSED  
+          sts_serial|  16|    100000|     100|0.42670305|  PASSED  
